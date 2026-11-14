@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    container_name: web-lab1
+    ports:
+      - "5000:5000"
+    environment:
+      - APP_NAME=web-lab1
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
